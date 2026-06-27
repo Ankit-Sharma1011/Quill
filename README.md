@@ -96,13 +96,12 @@ quill/
     |-- types/
       |--- message.ts
     |-- proxy.ts
-  |- .env.example
-  |- .env/.env.local
   |- .gitignore
   |- components.json
   |- environment.d.ts
   |- eslint.config.mjs
   |- next.config.mjs
+  |- package-lock.json
   |- package.json
   |- pnpm-lock.yaml
   |- pnpm-workspace.yaml
