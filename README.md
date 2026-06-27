@@ -1,0 +1,382 @@
+<a name="readme-top"></a>
+
+# Quill - The SaaS for Students
+
+![Quill - The SaaS for Students](/.github/images/img_main.png "Quill - The SaaS for Students")
+
+[![Ask Me Anything!](https://flat.badgen.net/static/Ask%20me/anything?icon=github&color=black&scale=1.01)](https://github.com/Ankit-Sharma1011 "Ask Me Anything!")
+[![GitHub license](https://flat.badgen.net/github/license/sanidhyy/quill?icon=github&color=black&scale=1.01)](https://github.com/Ankit-Sharma1011/quill/blob/main/LICENSE "GitHub license")
+[![Maintenance](https://flat.badgen.net/static/Maintained/yes?icon=github&color=black&scale=1.01)](https://github.com/Ankit-Sharma1011/quill/commits/main "Maintenance")
+[![GitHub branches](https://flat.badgen.net/github/branches/Ankit-Sharma1011/quill?icon=github&color=black&scale=1.01)](https://github.com/Ankit-Sharma1011/quill/branches "GitHub branches")
+[![Github commits](https://flat.badgen.net/github/commits/Ankit-Sharma1011/quill?icon=github&color=black&scale=1.01)](https://github.com/Ankit-Sharma1011/quill/commits "Github commits")
+[![GitHub issues](https://flat.badgen.net/github/issues/Ankit-Sharma1011/quill?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/quill/issues "GitHub issues")
+[![GitHub pull reUpload PDF files](https://flat.badgen.net/github/prs/Ankit-Sharma1011/quill?icon=github&color=black&scale=1.01)](https://github.com/Ankit-Sharma1011/quill/pulls "GitHub pull reUpload PDF files")
+[![Vercel status](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://ai-quill.vercel.app/ "Vercel status")
+
+<!-- Table of Contents -->
+<details>
+
+<summary>
+
+# :notebook_with_decorative_cover: Table of Contents
+
+</summary>
+
+- [Folder Structure](#bangbang-folder-structure)
+- [Getting Started](#toolbox-getting-started)
+- [Screenshots](#camera-screenshots)
+- [Tech Stack](#gear-tech-stack)
+- [Stats](#wrench-stats)
+- [Contribute](#raised_hands-contribute)
+- [Acknowledgements](#gem-acknowledgements)
+- [Buy Me a Coffee](#coffee-buy-me-a-coffee)
+- [Follow Me](#rocket-follow-me)
+- [Learn More](#books-learn-more)
+- [Deploy on Vercel](#page_with_curl-deploy-on-vercel)
+- [Give A Star](#star-give-a-star)
+- [Star History](#star2-star-history)
+- [Give A Star](#star-give-a-star)
+
+</details>
+
+## :bangbang: Folder Structure
+
+Here is the folder structure of this app.
+
+<!--- FOLDER_STRUCTURE_START --->
+```bash
+quill/
+  |- prisma/
+    |-- schema.prisma
+  |- public/
+  |- src/
+    |-- app/
+      |--- _trpc/
+      |--- api/
+      |--- auth-callback/
+      |--- dashboard/
+      |--- pricing/
+      |--- favicon.ico
+      |--- globals.css
+      |--- layout.tsx
+      |--- page.tsx
+    |-- components/
+      |--- chat/
+      |--- ui/
+      |--- billing-form.tsx
+      |--- dashboard.tsx
+      |--- delete-file-modal.tsx
+      |--- icons.tsx
+      |--- max-width-wrapper.tsx
+      |--- mobile-nav.tsx
+      |--- navbar.tsx
+      |--- pdf-fullscreen.tsx
+      |--- pdf-renderer.tsx
+      |--- providers.tsx
+      |--- upgrade-button.tsx
+      |--- upload-button.tsx
+      |--- user-account-nav.tsx
+    |-- config/
+      |--- infinite-query.ts
+      |--- links.ts
+      |--- message.ts
+      |--- stripe.ts
+    |-- db/
+      |--- index.ts
+    |-- lib/
+      |--- validators/
+      |--- openai.ts
+      |--- pinecone.ts
+      |--- stripe.ts
+      |--- uploadthing.ts
+      |--- utils.ts
+    |-- trpc/
+      |--- index.ts
+      |--- trpc.ts
+    |-- types/
+      |--- message.ts
+    |-- proxy.ts
+  |- .env.example
+  |- .env/.env.local
+  |- .gitignore
+  |- components.json
+  |- environment.d.ts
+  |- eslint.config.mjs
+  |- next.config.mjs
+  |- package.json
+  |- pnpm-lock.yaml
+  |- pnpm-workspace.yaml
+  |- postcss.config.js
+  |- prisma.config.ts
+  |- tailwind.config.ts
+  |- tsconfig.json
+  |- vercel.ts
+```
+<!--- FOLDER_STRUCTURE_END --->
+
+<br />
+
+## :toolbox: Getting Started
+
+1. Make sure **Git** and **NodeJS** is installed.
+2. Clone this repository to your local computer.
+3. Create `.env.local` file in **root** directory.
+4. Contents of `.env.local`:
+
+```env
+# .env.local
+
+# disabled next.js telemetry
+NEXT_TELEMETRY_DISABLED=1
+
+# kinde keys and urls
+KINDE_CLIENT_ID=XXXXXXXXXXXXXXXXXXXXXXXXXXX
+KINDE_CLIENT_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+KINDE_ISSUER_URL=https://example.kinde.com
+KINDE_SITE_URL=http://localhost:3000
+KINDE_POST_LOGOUT_REDIRECT_URL=http://localhost:3000
+KINDE_POST_LOGIN_REDIRECT_URL=http://localhost:3000/dashboard
+
+# neon db uri
+DATABASE_URL="postgresql://<user>:<password>@<hostname>:<port>/quill?sslmode=require"
+
+# uploadthing token
+UPLOADTHING_TOKEN=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+# app base url
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
+
+# pinecone api key
+PINECONE_API_KEY=xxxxxxxxxx-xxxxx-xxxx-xxxxxx-xxxxxxxxxxx
+
+# openai api key
+OPENAI_API_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+# stripe secret key, price id and webhook secret
+STRIPE_SECRET_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+STRIPE_PRICE_ID=XXXXXXXXXXXXXXXXXXXXXXXXX
+STRIPE_WEBHOOK_SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+
+```
+
+### 5. Next.js Telemetry
+
+- **Environment Variable**: `NEXT_TELEMETRY_DISABLED=1`
+- **Instructions**:
+  - Open your Next.js project.
+  - Locate the `.env.local` file.
+  - Add or update the line `NEXT_TELEMETRY_DISABLED=1` to disable Next.js telemetry.
+
+### 6. Kinde
+
+- **Environment Variables**:
+  - `KINDE_CLIENT_ID`
+  - `KINDE_CLIENT_SECRET`
+  - `KINDE_ISSUER_URL`
+  - `KINDE_SITE_URL`
+  - `KINDE_POST_LOGOUT_REDIRECT_URL`
+  - `KINDE_POST_LOGIN_REDIRECT_URL`
+- **Instructions**:
+  - Visit [Kinde's website](https://example.kinde.com) and sign in to your account.
+  - Navigate to your account settings or developer dashboard to find the API credentials.
+  - Retrieve the following:
+    - `KINDE_CLIENT_ID`
+    - `KINDE_CLIENT_SECRET`
+    - `KINDE_ISSUER_URL`
+  - For redirect URLs:
+    - `KINDE_SITE_URL`
+    - `KINDE_POST_LOGOUT_REDIRECT_URL`
+    - `KINDE_POST_LOGIN_REDIRECT_URL`
+
+### 7. Neon Database URI
+
+- **Environment Variable**: `DATABASE_URL="postgresql://<user>:<password>@<hostname>:<port>/quill?sslmode=require"`
+- **Instructions**:
+  - Access your PostgreSQL database management interface.
+  - Locate the database connection details.
+  - Construct the URI following the provided template and replace the placeholders with your actual database credentials.
+
+### 8. Uploadthing
+
+- **Environment Variables**:
+  - `UPLOADTHING_TOKEN`
+- **Instructions**:
+  - Visit the Uploadthing developer dashboard and Log in to your account.
+  - Create a new application and navigate to the API key section and generate a token.
+  - Retrieve `UPLOADTHING_TOKEN`.
+
+### 9. App Base URL
+
+- **Environment Variable**: `NEXT_PUBLIC_BASE_URL=http://localhost:3000`
+- **Instructions**:
+  - Simply set `NEXT_PUBLIC_BASE_URL=http://localhost:3000` in your `.env.local` file.
+
+### 10. Pinecone API Key
+
+- **Environment Variable**: `PINECONE_API_KEY=xxxxxxxxxx-xxxxx-xxxx-xxxxxx-xxxxxxxxxxx`
+- **Instructions**:
+  - Visit Pinecone's official website and log in to your account.
+  - Navigate to the API or developer section to find your API key.
+  - Retrieve `PINECONE_API_KEY`.
+
+### 11. OpenAI API Key
+
+- **Environment Variable**: `OPENAI_API_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`
+- **Instructions**:
+  - Log in to your OpenAI account on the official website.
+  - Navigate to the API or developer dashboard.
+  - Retrieve your API key.
+
+### 12. Stripe
+
+- **Environment Variables**:
+  - `STRIPE_SECRET_KEY`
+  - `STRIPE_PRICE_ID`
+  - `STRIPE_WEBHOOK_SECRET`
+- **Instructions**:
+  - Log in to your Stripe account.
+  - Navigate to the API or developer section.
+  - Retrieve the following:
+    - `STRIPE_SECRET_KEY`
+    - `STRIPE_PRICE_ID`
+    - `STRIPE_WEBHOOK_SECRET`
+
+13. Now app is fully configured 👍 and you can start using this app using either one of `npm run dev` or `pnpm dev`.
+
+**NOTE:** Please make sure to keep your API keys and configuration values secure and do not expose them publicly.
+
+## :camera: Screenshots
+
+![Modern UI/UX](/.github/images/img1.png "Modern UI/UX")
+
+![Upload PDF files](/.github/images/img2.png "Upload PDF files")
+
+![Ask any question to AI](/.github/images/img3.png "Ask any question to AI")
+
+![Buy Pro Plan](/.github/images/img4.png "Buy Pro Plan")
+
+## :gear: Tech Stack
+
+[![React JS](https://skillicons.dev/icons?i=react "React JS")](https://react.dev/ "React JS") [![Next JS](https://skillicons.dev/icons?i=next "Next JS")](https://nextjs.org/ "Next JS") [![Typescript](https://skillicons.dev/icons?i=ts "Typescript")](https://www.typescriptlang.org/ "Typescript") [![Tailwind CSS](https://skillicons.dev/icons?i=tailwind "Tailwind CSS")](https://tailwindcss.com/ "Tailwind CSS") [![Vercel](https://skillicons.dev/icons?i=vercel "Vercel")](https://vercel.app/ "Vercel") [![Postgresql](https://skillicons.dev/icons?i=postgres "Postgresql")](https://www.postgresql.org/ "Postgresql")
+
+## :wrench: Stats
+
+[![Stats for quill](/.github/images/stats.svg "Stats for quill")](https://pagespeed.web.dev/analysis?url=https://ai-quill.vercel.app/ "Stats for quill")
+
+## :raised_hands: Contribute
+
+You might encounter some bugs while using this app. You are more than welcome to contribute. Just submit changes via pull request and I will review them before merging. Make sure you follow community guidelines.
+
+## :gem: Acknowledgements
+
+Useful resources and dependencies that are used in quill.
+
+<!--- DEPENDENCIES_START --->
+- [@ai-sdk/openai](https://www.npmjs.com/package/@ai-sdk/openai): ^3.0.67
+- [@hookform/resolvers](https://www.npmjs.com/package/@hookform/resolvers): ^5.2.2
+- [@kinde-oss/kinde-auth-nextjs](https://www.npmjs.com/package/@kinde-oss/kinde-auth-nextjs): ^2.12.1
+- [@langchain/openai](https://www.npmjs.com/package/@langchain/openai): ^0.0.28
+- [@langchain/pinecone](https://www.npmjs.com/package/@langchain/pinecone): ^0.0.4
+- [@mantine/hooks](https://www.npmjs.com/package/@mantine/hooks): ^9.0.2
+- [@pinecone-database/pinecone](https://www.npmjs.com/package/@pinecone-database/pinecone): ^2.2.0
+- [@prisma/adapter-pg](https://www.npmjs.com/package/@prisma/adapter-pg): ^7.8.0
+- [@prisma/client](https://www.npmjs.com/package/@prisma/client): ^7.8.0
+- [@radix-ui/react-avatar](https://www.npmjs.com/package/@radix-ui/react-avatar): ^1.1.12
+- [@radix-ui/react-dialog](https://www.npmjs.com/package/@radix-ui/react-dialog): ^1.1.17
+- [@radix-ui/react-dropdown-menu](https://www.npmjs.com/package/@radix-ui/react-dropdown-menu): ^2.1.18
+- [@radix-ui/react-progress](https://www.npmjs.com/package/@radix-ui/react-progress): ^1.1.10
+- [@radix-ui/react-slot](https://www.npmjs.com/package/@radix-ui/react-slot): ^1.2.5
+- [@radix-ui/react-tooltip](https://www.npmjs.com/package/@radix-ui/react-tooltip): ^1.0.7
+- [@radix-ui/react-visually-hidden](https://www.npmjs.com/package/@radix-ui/react-visually-hidden): ^1.2.4
+- [@tailwindcss/typography](https://www.npmjs.com/package/@tailwindcss/typography): ^0.5.19
+- [@tanstack/react-query](https://www.npmjs.com/package/@tanstack/react-query): ^5.28.14
+- [@trpc/client](https://www.npmjs.com/package/@trpc/client): ^11.17.0
+- [@trpc/next](https://www.npmjs.com/package/@trpc/next): ^11.17.0
+- [@trpc/react-query](https://www.npmjs.com/package/@trpc/react-query): ^11.17.0
+- [@trpc/server](https://www.npmjs.com/package/@trpc/server): ^11.17.0
+- [@types/node](https://www.npmjs.com/package/@types/node): ^25
+- [@types/pg](https://www.npmjs.com/package/@types/pg): ^8.20.0
+- [@types/react](https://www.npmjs.com/package/@types/react): 19.2.17
+- [@types/react-dom](https://www.npmjs.com/package/@types/react-dom): 19.2.3
+- [@uploadthing/react](https://www.npmjs.com/package/@uploadthing/react): ^7.3.3
+- [@vercel/config](https://www.npmjs.com/package/@vercel/config): ^0.5.2
+- [@vercel/functions](https://www.npmjs.com/package/@vercel/functions): ^3.5.1
+- [ai](https://www.npmjs.com/package/ai): ^6.0.81
+- [autoprefixer](https://www.npmjs.com/package/autoprefixer): ^10.5.0
+- [class-variance-authority](https://www.npmjs.com/package/class-variance-authority): ^0.7.1
+- [clsx](https://www.npmjs.com/package/clsx): ^2.1.1
+- [date-fns](https://www.npmjs.com/package/date-fns): ^4.4.0
+- [dotenv](https://www.npmjs.com/package/dotenv): ^17.4.2
+- [eslint](https://www.npmjs.com/package/eslint): ^9
+- [eslint-config-next](https://www.npmjs.com/package/eslint-config-next): 16.1.6
+- [langchain](https://www.npmjs.com/package/langchain): ^0.1.33
+- [lucide-react](https://www.npmjs.com/package/lucide-react): ^1.17.0
+- [next](https://www.npmjs.com/package/next): 16.2.6
+- [next-themes](https://www.npmjs.com/package/next-themes): ^0.4.6
+- [openai](https://www.npmjs.com/package/openai): ^6.32.0
+- [pdf-parse](https://www.npmjs.com/package/pdf-parse): ^2.4.5
+- [pg](https://www.npmjs.com/package/pg): ^8.21.0
+- [postcss](https://www.npmjs.com/package/postcss): ^8
+- [prisma](https://www.npmjs.com/package/prisma): ^7.4.1
+- [react](https://www.npmjs.com/package/react): 19.2.7
+- [react-dom](https://www.npmjs.com/package/react-dom): 19.2.6
+- [react-dropzone](https://www.npmjs.com/package/react-dropzone): ^15.0.0
+- [react-hook-form](https://www.npmjs.com/package/react-hook-form): ^7.78.0
+- [react-loading-skeleton](https://www.npmjs.com/package/react-loading-skeleton): ^3.5.0
+- [react-markdown](https://www.npmjs.com/package/react-markdown): ^10.1.0
+- [react-pdf](https://www.npmjs.com/package/react-pdf): ^10.4.1
+- [react-resize-detector](https://www.npmjs.com/package/react-resize-detector): ^12.3.0
+- [react-textarea-autosize](https://www.npmjs.com/package/react-textarea-autosize): ^8.5.9
+- [simplebar-react](https://www.npmjs.com/package/simplebar-react): ^3.3.2
+- [sonner](https://www.npmjs.com/package/sonner): ^2.0.7
+- [stripe](https://www.npmjs.com/package/stripe): ^22.1.1
+- [tailwind-merge](https://www.npmjs.com/package/tailwind-merge): ^3.6.0
+- [tailwindcss](https://www.npmjs.com/package/tailwindcss): ^3.3.0
+- [tailwindcss-animate](https://www.npmjs.com/package/tailwindcss-animate): ^1.0.7
+- [typescript](https://www.npmjs.com/package/typescript): ^6
+- [uploadthing](https://www.npmjs.com/package/uploadthing): ^7.7.4
+- [zod](https://www.npmjs.com/package/zod): ^4.3.6
+
+<!--- DEPENDENCIES_END --->
+
+## :coffee: Buy Me a Coffee
+
+[<img src="https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" width="200" />](https://www.buymeacoffee.com/thelwkeymc "Buy me a Coffee")
+
+## :rocket: Follow Me
+
+[![Follow Me](https://img.shields.io/github/followers/Ankit-Sharma1011?style=social&label=Follow&maxAge=2592000)](https://github.com/Ankit-Sharma1011 "Follow Me")
+[![Tweet about this project](https://img.shields.io/twitter/url?style=social&url=https%3A%2F%2Fx.com%2F_thelwkeymc)](https://x.com/intent/tweet?text=Check+out+this+amazing+app:&url=https%3A%2F%2Fgithub.com%2Fthelwkeymc%2Fquill "Tweet about this project")
+
+## :books: Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## :page_with_curl: Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## :star: Give A Star
+
+You can also give this repository a star to show more people and they can use this repository.
+
+## :star2: Star History
+
+<a href="https://star-history.com/#Ankit-sharma1011/quill&Timeline">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=Ankit-sharma1011/quill&type=Timeline&theme=dark" />
+  <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=Ankit-sharma1011/quill&type=Timeline" />
+  <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=Ankit-sharma1011/quill&type=Timeline" />
+</picture>
+</a>
+
+<br />
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
