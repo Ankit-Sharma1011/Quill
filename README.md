@@ -5,11 +5,11 @@
 ![Quill - The SaaS for Students](/.github/images/img_main.png "Quill - The SaaS for Students")
 
 [![Ask Me Anything!](https://flat.badgen.net/static/Ask%20me/anything?icon=github&color=black&scale=1.01)](https://github.com/Ankit-Sharma1011 "Ask Me Anything!")
-[![GitHub license](https://flat.badgen.net/github/license/sanidhyy/quill?icon=github&color=black&scale=1.01)](https://github.com/Ankit-Sharma1011/quill/blob/main/LICENSE "GitHub license")
+[![GitHub license](https://flat.badgen.net/github/license/Ankit-Sharma1011/quill?icon=github&color=black&scale=1.01)](https://github.com/Ankit-Sharma1011/quill/blob/main/LICENSE "GitHub license")
 [![Maintenance](https://flat.badgen.net/static/Maintained/yes?icon=github&color=black&scale=1.01)](https://github.com/Ankit-Sharma1011/quill/commits/main "Maintenance")
 [![GitHub branches](https://flat.badgen.net/github/branches/Ankit-Sharma1011/quill?icon=github&color=black&scale=1.01)](https://github.com/Ankit-Sharma1011/quill/branches "GitHub branches")
 [![Github commits](https://flat.badgen.net/github/commits/Ankit-Sharma1011/quill?icon=github&color=black&scale=1.01)](https://github.com/Ankit-Sharma1011/quill/commits "Github commits")
-[![GitHub issues](https://flat.badgen.net/github/issues/Ankit-Sharma1011/quill?icon=github&color=black&scale=1.01)](https://github.com/sanidhyy/quill/issues "GitHub issues")
+[![GitHub issues](https://flat.badgen.net/github/issues/Ankit-Sharma1011/quill?icon=github&color=black&scale=1.01)](https://github.com/Ankit-Sharma1011/quill/issues "GitHub issues")
 [![GitHub pull reUpload PDF files](https://flat.badgen.net/github/prs/Ankit-Sharma1011/quill?icon=github&color=black&scale=1.01)](https://github.com/Ankit-Sharma1011/quill/pulls "GitHub pull reUpload PDF files")
 [![Vercel status](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://ai-quill.vercel.app/ "Vercel status")
 
