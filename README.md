@@ -11,7 +11,7 @@
 [![Github commits](https://flat.badgen.net/github/commits/Ankit-Sharma1011/quill?icon=github&color=black&scale=1.01)](https://github.com/Ankit-Sharma1011/quill/commits "Github commits")
 [![GitHub issues](https://flat.badgen.net/github/issues/Ankit-Sharma1011/quill?icon=github&color=black&scale=1.01)](https://github.com/Ankit-Sharma1011/quill/issues "GitHub issues")
 [![GitHub pull reUpload PDF files](https://flat.badgen.net/github/prs/Ankit-Sharma1011/quill?icon=github&color=black&scale=1.01)](https://github.com/Ankit-Sharma1011/quill/pulls "GitHub pull reUpload PDF files")
-[![Vercel status](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://ai-quill.vercel.app/ "Vercel status")
+[![Netlify](https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white)](https://aiquill.netlify.app/ "Netlify status")
 
 <!-- Table of Contents -->
 <details>
